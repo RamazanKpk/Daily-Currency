@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ana Sayfa</h2>
+
+<style>
+    .errorMessage {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="errorMessage">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+</body>
+

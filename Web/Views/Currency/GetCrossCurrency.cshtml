@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Entitiy.Concrate.DailyCurrency>
+
+@{
+    ViewBag.Title = "Cross Currencies";
+}
+
+<h2>Cross Currencies</h2>
+<link rel="stylesheet" href="~/Content/Style/Style.css" />
+
+<div id="container">
+    <form id="filterForm">
+        <label for="startDate">Start Date</label>
+        <input type="datetime-local" id="startDate" name="startDate" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="endDate">End Date</label>
+        <input type="datetime-local" id="endDate" name="endDate" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="codeCurrency">Currency Code</label>
+        <input type="text" id="codeCurrency" name="codeCurrency" placeholder="Currency Code" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <button type="button" id="filterCodeCurrency" class="btn btn-warning">Filter Currencyies</button>
+    </form>
+</div>
+
+
+
+<div id="tableContainer">
+    <table id="crossCurrencyTable" class="table  table-striped">
+
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Currency Code</th>
+                <th>Unit</th>
+                <th>Currency Name</th>
+                <th>CrossRateUSD</th>
+                <th>CrossRateOther</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <table id="currencySDRTable" class="table  table-striped">
+
+        <thead>
+            <tr>
+                <th>Information</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/js/daily.js"></script>

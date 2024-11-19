@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Entitiy.Concrate.User>
+
+@{
+    ViewBag.Title = "User List";
+}
+
+<h2>User List</h2>
+
+<p>
+    @Html.ActionLink("New User", "Create", null, new { @class = "btn btn-success pull-right" }) <br /><br />
+</p>
+<table class="table">
+    <tr>
+        <th class="flex-column">
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NormalExchangeRatesAuthorization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CrossExchangeRatesAuthorization)
+        </th>
+        <th></th>
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NormalExchangeRatesAuthorization)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CrossExchangeRatesAuthorization)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UserID }, new {@class="btn btn-primary"})
+                    @Html.ActionLink("Details", "Details", new { id = item.UserID }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UserID }, new { @class = "btn btn-danger",
+                   oneclick = "return confirm('" + " * " + @item.UserName + " * should the user record be deleted?')"
+               })
+                </td>
+            </tr>
+        }
+    }
+    </table>

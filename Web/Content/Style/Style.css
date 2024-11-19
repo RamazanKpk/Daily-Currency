@@ -1,0 +1,63 @@
+﻿
+#container, #tableContainer {
+    width: 1400px;
+    margin-bottom: 20px;
+}
+#filterForm {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;   
+}
+#filterForm label{
+    font-weight:500;
+}
+
+/* Tablo stilini tanımla */
+#crossCurrencyTable {
+    border-collapse: collapse;
+    
+    width: 100%;
+}
+
+    #crossCurrencyTable th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-size: 20px;
+        color: brown;
+    }
+    #crossCurrencyTable td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    #crossCurrencyTable th {
+        background-color: #f2f2f2;
+    }
+
+#currencyTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #currencyTable th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-size: 20px;
+        color: brown;
+    }
+
+    #currencyTable td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;      
+    }
+
+    #currencyTable th {
+        background-color: #f2f2f2;
+    }
+
+

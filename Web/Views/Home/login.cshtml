@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken();
+        <div class="panel panel-default"  style="margin-top: 100px; margin-left: 500px; margin-right:500px;">
+            <div class="panel-body">
+                <div class="form-control">
+                    <h4 class="text-center">Oturum Aç</h4>
+                    <input type="text" class="form-control" placeholder="User Name" name="UserName" />
+                    <br />
+
+                    <input type="password" class="form-control" placeholder="Password" name="Password" /><br />
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Oturum Aç</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+
