@@ -133,26 +133,6 @@ $(document).ready(function () {
 
         });
     }
-    //function signControl(changeRate) {
-
-    //    var color; //= changeRate >= 0 ? 'green' : 'red';
-    //    if (changeRate === 0) {
-    //        return '';
-    //    }
-    //    if (changeRate > 0) {
-    //        color = 'green';
-    //    } else  {
-    //        color = 'red';
-    //    }
-    //    var arrow;
-    //    if (changeRate >= 0) {
-    //        arrow = '▲';
-    //    } else {
-    //        arrow = '▼';
-    //    }
-    //    var changeRateFormatted = changeRate.toFixed(2) + '%';
-    //    return '<span style="color: ' + color + '">' + '(' + arrow + ' ' + changeRateFormatted + ')' + '</span>';
-    //}
     function colorChange(changeRate) {
         var color;
         var changeAmount;
@@ -170,25 +150,11 @@ $(document).ready(function () {
     }
 
     function fomateDate(dateString) {
-        // Verilen stringi sayısal kısmı al
         var unixTime = parseInt(dateString.match(/\d+/)[0]);
-        // Unix zamanını Date objesine çevir
         var date = new Date(unixTime);
-        // Tarih ve saat bilgisini istediğiniz formata dönüştür
         var formattedDate = ("0" + date.getDate()).slice(-2) + "/" + ("0" + (date.getMonth() + 1)).slice(-2) + "/" + date.getFullYear();
         var formattedTime = ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
         var formattedDateTime = formattedDate + " " + formattedTime;
         return formattedDateTime;
     }
-
-
-
-    //function fomateDate(unixTime) {
-    //    var date = new Date(unixTime);
-    //    var formattedDate = ("0" + date.getDate()).slice(-2) + "/" + ("0" + (date.getMonth() + 1)).slice(-2) + "/" + date.getFullYear();
-    //    var formattedTime = ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
-    //    var formattedDateTime = formattedDate + " " + formattedTime;
-    //    return formattedDateTime;
-
-    //}
 });
